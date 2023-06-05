@@ -1,0 +1,27 @@
+
+
+.navbartop-container {
+    position: absolute;
+    width: 100%;
+}
+
+.navbartop-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 72px;
+}
+
+.company-nav-link{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 16px;
+}
+
+.company-logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+

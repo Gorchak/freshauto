@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+
+
+.homepage-title {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 15px 0 40px;
+}
+
+.hompage-section-image {
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+
+.experience-item{
+    color: $text-color;
+}
+
+.experience-order {
+    color: white;
+    opacity: 0.3;
+    font-size: 54px;
+}
+
+.experience-title {
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.experience-text{
+    display: inline-block;
+    max-width: 255px;
+}
+
+.homepage-aboutus {
+    padding-bottom: 70px;
+}

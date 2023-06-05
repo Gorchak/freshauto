@@ -1,0 +1,64 @@
+@import "../../../styles/variables";
+
+
+.homepage-title {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 15px 0 40px;
+}
+
+.hompage-section-image {
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+
+.homepage-aboutus {
+    background-color: $dark-grey;
+    min-height: 565px;
+    padding: 30px 0;
+    padding-top: 100px;
+  }
+  
+  .homepage-title {
+      font-size: 32px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      margin: 15px 0 40px;
+  }
+
+  .experience-text {
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.6;
+    font-size: 14px;
+  }
+
+  .experience-title {
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .experience-order {
+    color: white;
+    opacity: 0.3;
+    font-size: 52px;
+  }
+
+  .about-us-video{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+
+    video {
+        width: 100%;
+        max-width: 1110px;
+    }
+  }

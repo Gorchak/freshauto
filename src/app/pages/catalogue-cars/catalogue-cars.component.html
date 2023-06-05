@@ -1,0 +1,135 @@
+<article class="catalogue container">
+  <div class="row">
+    <div class="col" *ngIf="!isShortList">
+      <div class="cars-filter wow fadeInUp" data-wow-duration="1s">
+        <form class="cars-filter-form" [formGroup]="filterForm">
+          <p-multiSelect
+            [options]="models"
+            optionLabel="value"
+            defaultLabel="МАРКА АВТО"
+            display="chip"
+            formControlName="byBrand"
+            class="cars-filter-field"
+          ></p-multiSelect>
+          <p-multiSelect
+            [options]="years"
+            optionLabel="label"
+            defaultLabel="РІК ВИПУСКУ"
+            display="chip"
+            formControlName="byYear"
+            class="cars-filter-field"
+          ></p-multiSelect>
+          <p-multiSelect
+            [options]="transmission"
+            optionLabel="label"
+            defaultLabel="ТРАНСМІСІЯ"
+            display="chip"
+            formControlName="byTransmission"
+            class="cars-filter-field"
+          ></p-multiSelect>
+          <!-- <input class="input-default" placeholder="Оберіть тип" /> -->
+          <p-multiSelect
+            [options]="fuelType"
+            optionLabel="label"
+            defaultLabel="ТИП ПАЛЬНОГО"
+            display="chip"
+            formControlName="byFuelType"
+            class="cars-filter-field"
+          ></p-multiSelect>
+          <input
+            class="input-default cars-filter-field"
+            formControlName="byMaxPrice"
+            placeholder="Макс. ціна $"
+          />
+          <input
+            class="input-default cars-filter-field"
+            formControlName="byMaxMileage"
+            placeholder="Макс. пробіг, км"
+          />
+          <button
+            class="hmp-button cars-filter-button"
+            (click)="resetFilters()"
+          >
+            ОЧИСТИТИ ФІЛЬТР
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" [ngClass]="{ 'сol-9': !isShortList }">
+      <div
+        class="catalogue-cars wow fadeInLeft"
+        data-wow-duration="3s"
+        [ngClass]="{ 'full-catalogue-container': !isShortList }"
+      >
+        <div class="row">
+          <ng-container
+            [ngTemplateOutlet]="emptyList"
+            *ngIf="isEmptyList && filteredCars.length === 0"
+          ></ng-container>
+          <ng-container
+            [ngTemplateOutlet]="defaultList"
+            *ngIf="!isEmptyList || filteredCars || cars"
+          ></ng-container>
+          <ng-container
+            [ngTemplateOutlet]="loading"
+            *ngIf="!isEmptyList && !cars"
+          ></ng-container>
+
+          <ng-template #defaultList>
+            <div
+              class="col-lg-3 col-md-4 col-xs-5"
+              *ngFor="let car of filteredCars || cars"
+              (click)="navigateToCarDetails(car.slug)"
+            >
+              <div class="catalogue-car-item">
+                <div
+                  class="car-image"
+                  [ngClass]="{ 'car-image-bigger': isShortList }"
+                >
+                  <ng-template [ngIf]="car.images.length" [ngIfElse]="noimage">
+                    <img [src]="car.images[0]" />
+                    <span class="car-price-on-img">
+                      {{ car.priceOnSale }} $
+                    </span>
+                  </ng-template>
+
+                  <ng-template #noimage>
+                    <img
+                      class="car-image-empty"
+                      src="assets/images/no-photo.jpg"
+                    />
+                  </ng-template>
+                </div>
+                <div class="car-info-container">
+                  <span class="car-info-title">
+                    {{ car.mark }} {{ car.model }} {{ car.year }}
+                  </span>
+                  <div class="car-info-footer">
+                    <span>{{ car.hp }} KC</span>
+                    <span>{{
+                      car.driveType === 2 ? "АВТОМАТ" : "МЕХАНІКА"
+                    }}</span>
+                    <span>{{ car.odometr }} ТИС.КМ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <ng-template #emptyList>
+            <div class="empty-list-container wow fadeInLeft"
+            data-wow-duration="1s">
+              Нажаль, немає авто з вибраними характеристиками
+            </div>
+          </ng-template>
+
+          <ng-template #loading>
+            <fa-car-spinner></fa-car-spinner>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

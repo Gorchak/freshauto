@@ -1,0 +1,171 @@
+@import "../../../styles/variables";
+@import "../../../styles/forms";
+
+
+.catalogue {
+  padding: 15px 0 30px;
+}
+
+.catalogue-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.car-info {
+  background-color: white;
+  padding: 16px;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity));
+}
+
+.car-characteristics {
+  display: flex;
+  img {
+    width: 14px;
+  }
+}
+
+.catalogue-car-item {
+  // -webkit-box-shadow: 0px 2px 5px -1px rgba(202,205,209,1);
+  // -moz-box-shadow: 0px 2px 5px -1px rgba(202,205,209,1);
+  // box-shadow: 0px 2px 5px -1px rgba(202,205,209,1);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.car-image-bigger {
+  overflow: hidden;
+  text-align: center;
+  img {
+    height: 234px;
+    width: auto;
+  }
+}
+
+.car-image-empty {
+  position: relative;
+  right: 90px;
+}
+
+.car-info-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.car-title{
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+    height: 46px;
+    max-width: 200px;
+}
+
+.car-info-field{
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+// .car-info-footer{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-top: 10px;
+// }
+
+.car-price {
+    background-color: $main-blue;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.catalogue-cars {
+  
+    // justify-content: space-between;
+}
+
+.full-catalogue-container{
+  padding-top: 30px;
+}
+
+.cars-filter {
+  padding-top: 160px;
+}
+
+.cars-filter-title {
+  color: white;
+  font-size: 22px;
+}
+
+.cars-filter-form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.car-info-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-top: 8px;
+}
+
+.car-info-title{
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.car-info-footer{
+  span{
+    color: $text-color;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+}
+
+.car-image{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  img{
+    width: 100%;
+  }
+}
+
+.car-price-on-img{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 26px;
+  padding: 2px 12px;
+}
+
+.cars-filter-field {
+  max-width: 170px;
+  font-size: 14px;
+  margin-right: 30px;
+}
+
+.cars-filter-button {
+  padding: 19px 16px;
+  background-color: $dark-grey-second;
+  color: $text-color;
+}
+
+.empty-list-container {
+  border-radius: 4px;
+  margin: 30px auto;
+  background: $main-blue;
+  color: white;
+  max-width: 530px;
+  font-size: 20px;
+  padding: 20px;
+}

@@ -1,0 +1,7 @@
+{
+    "https://api.freshauto.com.ua/api/cars/GetOnSale": {
+      "target": "https://api.freshauto.com.ua",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }

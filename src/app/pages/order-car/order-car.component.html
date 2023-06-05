@@ -1,0 +1,75 @@
+<article class="order-container">
+  <div class="container">
+    <div class="row">
+      <span class="order-title"> ЗАМОВИТИ АВТО </span>
+      <span class="order-text">
+        НЕ ЗНАЙШЛИ АВТОМОБІЛЬ ЯКИЙ ВАМ ПІДХОДИТЬ ? НЕ ПРОБЛЕМА, МИ З РАДІСТЮ
+        ПОСПІЛКУЄМОСЬ З ВАМИ І ЯКЩО ВАШІ БАЖАННЯ СПІВПАДУТЬ З НАШИМИ
+        МОЖЛИВОСТЯМИ МИ З РАДІСТЮ КУПИМО ДОСТАВИМО РОЗМИТНЕМО ТА ЗАРЕЄСТРУЄМО
+        ВАМ АВТОМОБІЛЬ
+      </span>
+    </div>
+    <div class="row">
+      <div class="col">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <div
+            *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+            class="validation-error"
+          >
+            <div *ngIf="name?.errors?.['required']">Ім'я є обов'язковим</div>
+            <div *ngIf="name?.errors?.['minlength']">
+              Ім'я повинно містити щонайменше 2 символи
+            </div>
+          </div>
+          <input
+            placeholder="Ваше ім'я"
+            class="input-default"
+            type="text"
+            id="name"
+            formControlName="name"
+            required
+          />
+          <div
+            *ngIf="
+              phoneNumber?.invalid &&
+              (phoneNumber?.dirty || phoneNumber?.touched)
+            "
+            class="validation-error"
+          >
+            <div *ngIf="phoneNumber?.errors?.['required']">
+              Номер телефону є обов'язковим
+            </div>
+            <div *ngIf="phoneNumber?.errors?.['pattern']">
+              Номер телефону повинен містити рівно 10 цифр
+            </div>
+          </div>
+          <input
+            placeholder="Номер телефону"
+            class="input-default"
+            type="text"
+            id="phoneNumber"
+            formControlName="phoneNumber"
+            required
+          />
+
+          <textarea
+            placeholder="Нотатка"
+            class="input-default textarea-default"
+            id="notes"
+            formControlName="notes"
+          ></textarea>
+          <button class="hmp-button hmp-blue width-100" type="submit">
+            Відправити
+          </button>
+        </form>
+      </div>
+      <div class="col">
+        <div class="order-image">
+          <img
+            src="http://front.freshauto.com.ua/wp-content/uploads/2023/03/image1-1.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

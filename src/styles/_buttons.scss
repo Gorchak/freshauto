@@ -1,0 +1,30 @@
+// Buttons
+
+.hmp-button {
+    color: white;
+    background: $dark-grey;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 17px 20px;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    height: 58px;
+    min-width: 163px;
+    width: auto;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.hmp-blue {
+    background: $main-blue;
+    opacity: 0.9;
+    border-radius: 4px;
+    height: 55px;
+    
+    &:hover {
+        opacity: 1;
+    }
+}

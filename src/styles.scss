@@ -1,0 +1,162 @@
+@import './styles/variables';
+@import './../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import "primeng/resources/primeng.css";
+
+body {
+    background: $dark-grey;
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+.max-width-container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-width-content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+}
+
+
+
+// Buttons
+
+.hmp-button {
+    color: white;
+    background: $dark-grey;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 17px 20px;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    height: 58px;
+    min-width: 163px;
+    width: auto;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.hmp-blue {
+    background: $main-blue;
+    opacity: 0.9;
+    border-radius: 4px;
+    height: 55px;
+    
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+.width-100 {
+    width: 100%;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+
+
+
+// Dropdown
+
+
+.p-multiselect {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 1px solid #3a393b;
+    color: white;
+    line-height: 19px;
+    max-width: 100%;
+    background: transparent;
+    width: 100%;
+    margin-bottom: 16px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+}
+
+.p-multiselect-panel .p-multiselect-header{
+    background: $light-section-background;
+
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item{
+    background: $light-section-background;
+}
+
+.p-multiselect-panel .p-multiselect-items {
+    background: $light-section-background;
+    
+}
+
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+    background: $main-blue;
+    color: white;
+}
+
+.p-multiselect:not(.p-disabled):hover {
+    border-color: white;
+}
+
+.p-multiselect .p-multiselect-label {
+    padding-right: 0px;
+}
+
+.p-multiselect .p-multiselect-trigger {
+    width: 2rem;
+    padding-right: 5px;
+}
+
+
+// Animations
+
+@keyframes slideIn {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

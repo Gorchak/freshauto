@@ -1,0 +1,115 @@
+<section class="car-details-section" *ngIf="carDetails">
+  <div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="hmp-button mb-10 wow fadeInUp" data-wow-duration="1s" (click)="goToCatalogue()">До каталогу</button>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <p-galleria class="wow fadeInUp" data-wow-duration="2s" [value]="carDetails.images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px;' }" [numVisible]="5">
+            <ng-template pTemplate="item" let-item>
+              <img [src]="item" style="width: 100%;" />
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item>
+              <div class="grid grid-nogutter justify-content-center">
+                <img [src]="item" style="max-height: 80px; width: auto; object-fit: contain;" />
+              </div>
+            </ng-template>
+          </p-galleria>
+          
+      </div>
+      <div class="col-4">
+        <div class="car-main-info wow fadeInUp" data-wow-duration="2s">
+            <div class="car-title">{{carDetails.mark}} {{carDetails.model}} {{carDetails.year}}</div>
+            <div class="car-main-info-item">
+                <span>
+                    РІК
+                </span>
+                <span>
+                    {{carDetails.year}}
+                </span>
+            </div>
+            <div class="car-main-info-item">
+                <span>
+                    ТИП ПАЛИВА
+                </span>
+                <span>
+                    {{carDetails.fuel === 1 ? 'ДИЗЕЛЬ' : 'БЕНЗИН'}}
+                </span>
+            </div>
+            <div class="car-main-info-item">
+                <span>
+                    ОБ'ЄМ ДВИГУНА
+                </span>
+                <span>
+                    {{carDetails.volume}} л.
+                </span>
+            </div>
+            <div class="car-main-info-item">
+                <span>
+                    ПОТУЖНІСТЬ
+                </span>
+                <span>
+                    {{carDetails.hp}} к.с.
+                </span>
+            </div>
+            <div class="car-main-info-item">
+                <span>
+                    КОРОБКА ПЕРЕДАЧ
+                </span>
+                <span>
+                    {{carDetails.driveType === 2 ? 'АВТОМАТ' : 'МЕХАНІКА'}}
+                </span>
+            </div>
+            <div class="car-main-info-item">
+                <span>
+                    ПРИВІД
+                </span>
+                <span>
+                    {{carDetails.transmission === 0 ? 'ПОВНИЙ' : '____'}}
+                </span>
+            </div>
+            <div class="car-main-info-item">
+                <span>
+                    ПРОБІГ
+                </span>
+                <span>
+                    {{carDetails.odometr}}
+                </span>
+            </div>
+            <div class="car-main-info-item">
+                <span>
+                    МІСЦЕЗНАХОДЖЕННЯ
+                </span>
+                <span>
+                    {{carDetails.location}}
+                </span>
+            </div>
+            <!-- <div class="car-main-info-item">
+                <span>
+                    ЗАПАС ХОДУ
+                </span>
+                <span>
+                    0
+                </span>
+            </div> -->
+    
+            <!-- <div class="car-main-info-item">
+                <span>
+                    ВІН
+                </span>
+                <span>
+                    TMBLJ9NPXK7057398
+                </span>
+            </div> -->
+
+            <button class="hmp-button hmp-blue width-100 mt-20">КУПИТИ ЗА {{carDetails.priceOnSale}} $</button>
+          </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<section class="section"></section>

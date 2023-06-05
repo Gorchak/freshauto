@@ -1,0 +1,1 @@
+export const MAIN_API_URL = 'https://api.freshauto.com.ua/api';

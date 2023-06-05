@@ -1,0 +1,79 @@
+<section class="homepage-background homepage-top-content">
+  <div class="container">
+    <div class="row">
+      <span class="homepage-top-title wow fadeInLeft" data-wow-duration="2s">
+        ВТІЛЮЙ МРІЇ РАЗОМ <br />З FRESH AUTO
+      </span>
+      <span class="homepage-top-descr wow fadeInLeft" data-wow-duration="2s">
+        ШВИДКА ПОКУПКА АВТО НА ВИГІДНИХ УМОВАХ, З ГАРАНТІЄЮ ТА ОФОРМЛЕННЯМ!
+      </span>
+      <button class="hmp-button hmp-blue wow fadeInLeft" data-wow-delay="1s" data-wow-duration="2s" routerLink="order-car">
+        Замовити авто
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="homepage-catalogue">
+  <div class="container">
+    <div class="row">
+      <div class="homepage-catalogue-header wow fadeInDown">
+        <span>КАТАЛОГ АВТО</span>
+        <button class="hmp-button" routerLink="cars">Показати більше</button>
+      </div>
+    </div>
+  </div>
+
+  <fa-catalogue-cars [isShortList]="true"></fa-catalogue-cars>
+</section>
+
+<section class="homepage-aboutus">
+  <div class="container">
+    <div class="row">
+      <span class="homepage-title wow fadeInDown">ПРО КОМПАНІЮ</span>
+    </div>
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="homepage-aboutus-content">
+          <div class="homepage-aboutus-logo wow fadeInLeft" data-wow-duration="2s">
+            <img src="assets/images/logo.svg" />
+          </div>
+
+          <div class="homepage-aboutus-title wow fadeIn" data-wow-duration="3s">
+            FRESH AUTO – БІЛЬШЕ НІЖ АВТО З ЄВРОПИ
+          </div>
+
+          <div class="homepage-aboutus-text wow fadeInUp" data-wow-duration="4s">
+            FRESH AUTO – ЦЕ НАЙБІЛЬШИЙ АВТОМАЙДАНЧИК У МІСТІ ЗАХІДНІЙ УКРАЇНІ.
+            НА НАШОМУ АВТО МАЙДАНЧИКУ ЗІБРАНО ПОНАД 50 РОЗМИТНЕНИХ
+            МУЛЬТИБРЕНДОВИХ АВТО, ГОТОВИХ ДО ЕКСПЛУАТАЦІЇ. КРУТА КОМАНДА
+            ПРОФЕСІОНАЛІВ, ЯКА ОРІЄНТУЄТЬСЯ НА КОЖНОГО З ВАС!
+          </div>
+
+          <button
+            type="submit"
+            class="homepage-aboutus-button hmp-button wow fadeInUp" data-wow-duration="4s"
+            routerLink="about-us"
+          >
+            Більше про нас
+          </button>
+        </div>
+      </div>
+      <div class="col col-xs-12">
+        <div class="hompage-section-image wow fadeIn" data-wow-duration="6s">
+          <img
+            src="https://front.freshauto.com.ua/wp-content/uploads/2023/03/video.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <fa-our-experience class="wow bounceInUp"></fa-our-experience>
+</section>
+
+<section>
+  <fa-our-contacts></fa-our-contacts>
+</section>

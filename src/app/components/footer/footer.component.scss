@@ -1,0 +1,47 @@
+@import "../../../styles/variables";
+
+.footer-list-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.footer-container {
+  padding: 45px 72px 35px;
+  background-color: $dark-grey-second;
+}
+
+.footer-bottom-text {
+  color: white;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.footer-list-title {
+  color: $light-grey;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer-lng-button {
+  background-color: transparent;
+  border: none;
+  color: $light-grey;
+  opacity: 0.5;
+}
+
+.footer-lng-active-button {
+  border-bottom: 1px solid $light-grey;
+  opacity: 1;
+}
+
+.footer-sn-container {
+    a {
+        display: inline-block;
+        margin-right: 16px;
+        outline: none;
+        img {
+            width: 24px;
+        }
+    }
+}

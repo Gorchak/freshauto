@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { OurContactsComponent } from './our-contacts.component';
+
+describe('OurContactsComponent', () => {
+  let component: OurContactsComponent;
+  let fixture: ComponentFixture<OurContactsComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ OurContactsComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(OurContactsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

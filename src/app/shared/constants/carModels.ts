@@ -1,0 +1,17 @@
+export enum CarModels {
+    Audi = 'Audi',
+    BMW = 'BMW',
+    Buerstner = 'Buerstner',
+    Chevrolet = 'Chevrolet',
+    Hyundai = 'Hyundai',
+    Kia = 'Kia',
+    MercedesBenz = 'Mercedes-Benz',
+    Nissan = 'Nissan',
+    Opel = 'Opel',
+    Otokar = 'Otokar',
+    Porshe = 'Porshe',
+    Peugeot = 'Peugeot',
+    Renault = 'Renault',
+    Skoda = 'Skoda',
+    Volkswagen = 'Volkswagen',
+}
